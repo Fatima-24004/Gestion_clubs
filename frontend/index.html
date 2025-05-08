@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Clubs - Institut</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/supnum.png" alt="Logo Institut">
+                <span>SupClubs</span>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="#" class="active">Accueil</a></li>
+                <li><a href="clubs.html">Clubs</a></li>
+                <li><a href="evenements.html">Événements</a></li>
+                <li><a href="about.html">À propos</a></li>
+            </ul>
+            
+            <div class="auth-buttons">
+                <button class="login-btn">Connexion</button>
+                <button class="signup-btn">Inscription</button>
+            </div>
+            
+            <button class="hamburger">☰</button>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <h1>Découvrez les clubs de notre institut</h1>
+            <p>Rejoignez une communauté dynamique et participez à des activités enrichissantes qui correspondent à vos passions et à vos intérêts.</p>
+            <button class="cta-button" onclick="window.location.href='clubs.html'">Explorer les clubs</button>
+        </section>
+        
+        <section class="clubs-section">
+            <h2 class="section-title">Clubs populaires</h2>
+            <div class="clubs-grid">
+                <div class="club-card">
+                    <div class="club-image">
+                        <img src="/api/placeholder/300/200" alt="Club Informatique">
+                    </div>
+                    <div class="club-info">
+                        <h3>Club Informatique</h3>
+                        <p>Explorez le monde de la programmation, de l'intelligence artificielle et de la cybersécurité.</p>
+                        <div class="club-tags">
+                            <span class="tag">Technologie</span>
+                            <span class="tag">Programmation</span>
+                        </div>
+                        <a href="#" class="view-club-btn">Voir plus</a>
+                    </div>
+                </div>
+                
+                <div class="club-card">
+                    <div class="club-image">
+                        <img src="/api/placeholder/300/200" alt="Club Robotique">
+                    </div>
+                    <div class="club-info">
+                        <h3>Club Robotique</h3>
+                        <p>Concevez, construisez et programmez des robots pour participer à des compétitions nationales.</p>
+                        <div class="club-tags">
+                            <span class="tag">Technologie</span>
+                            <span class="tag">Ingénierie</span>
+                        </div>
+                        <a href="#" class="view-club-btn">Voir plus</a>
+                    </div>
+                </div>
+                
+                <div class="club-card">
+                    <div class="club-image">
+                        <img src="/api/placeholder/300/200" alt="Club Football">
+                    </div>
+                    <div class="club-info">
+                        <h3>Club Football</h3>
+                        <p>Participez à des matchs amicaux, des tournois et développez vos compétences footballistiques dans une ambiance conviviale.</p>
+                        <div class="club-tags">
+                            <span class="tag">Sport</span>
+                            <span class="tag">Compétition</span>
+                        </div>
+                        
+                        <a href="#" class="view-club-btn">Voir plus</a>
+                    </div>
+                </div>
+
+                <div class="club-card">
+                    <div class="club-image">
+                        <img src="/api/placeholder/300/200" alt="Club Échecs">
+                    </div>
+                    <div class="club-info">
+                        <h3>Club Échecs</h3>
+                        <p>Améliorez votre stratégie et votre concentration en participant à des parties d'échecs et des tournois internes.</p>
+                        <div class="club-tags">
+                            <span class="tag">Jeu</span>
+                            <span class="tag">Stratégie</span>
+                        </div>
+                        
+                        <a href="#" class="view-club-btn">Voir plus</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="clubs-section">
+            <div class="section-title">
+                <h2>Événements à venir</h2>
+            </div>
+            <div class="clubs-grid">
+                <div class="club-card">
+                    <div class="club-image">
+                        <img src="/api/placeholder/300/200" alt="Hackathon annuel">
+                    </div>
+                    <div class="club-info">
+                        <h3>Hackathon annuel</h3>
+                        <p>48 heures de coding, d'innovation et de collaboration pour résoudre des problèmes réels.</p>
+                        <div class="club-tags">
+                            <span class="tag">Technologie</span>
+                            <span class="tag">Compétition</span>
+                        </div>
+                        <a href="#" class="view-club-btn">S'inscrire</a>
+                    </div>
+                </div>
+                
+                <div class="club-card">
+                    <div class="club-image">
+                        <img src="/api/placeholder/300/200" alt="Exposition artistique">
+                    </div>
+                    <div class="club-info">
+                        <h3>Exposition artistique</h3>
+                        <p>Découvrez les œuvres créées par les étudiants de notre institut lors de cette exposition annuelle.</p>
+                        <div class="club-tags">
+                            <span class="tag">Art</span>
+                            <span class="tag">Événement</span>
+                        </div>
+                        <a href="#" class="view-club-btn">Plus d'infos</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 ClubConnect - Institut. Tous droits réservés.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html>

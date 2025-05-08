@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clubs - ClubConnect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/supnum.png" alt="Logo Institut">
+                <span>SupClubs</span>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="clubs.html" class="active">Clubs</a></li>
+                <li><a href="evenements.html">Événements</a></li>
+                <li><a href="about.html">À propos</a></li>
+            </ul>
+            
+            <div class="auth-buttons">
+                <button class="login-btn">Connexion</button>
+                <button class="signup-btn">Inscription</button>
+            </div>
+            
+            <button class="hamburger">☰</button>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <h1>Nos Clubs</h1>
+            <p>Découvrez tous les clubs disponibles et trouvez celui qui correspond à vos passions.</p>
+        </section>
+        
+        <section class="clubs-section">
+            <div class="section-title">
+                <h2>Tous les clubs</h2>
+            </div>
+            
+            <div class="clubs-filter">
+                <div class="search-bar">
+                    <input type="text" placeholder="Rechercher un club...">
+                    <button class="search-btn">Rechercher</button>
+                </div>
+                <div class="filter-tags">
+                    <button class="filter-btn active">Tous</button>
+                    <button class="filter-btn">Technologie</button>
+                    <button class="filter-btn">Art</button>
+                    <button class="filter-btn">Sport</button>
+                    <button class="filter-btn">Culture</button>
+                </div>
+            </div>
+
+            <div class="clubs-grid">
+                <div class="club-card">
+                    <div class="club-image">
+                        <img src="/api/placeholder/300/200" alt="Club Informatique">
+                    </div>
+                    <div class="club-info">
+                        <h3>Club Informatique</h3>
+                        <p>Explorez le monde de la programmation, de l'intelligence artificielle et de la cybersécurité.</p>
+                        <div class="club-tags">
+                            <span class="tag">Technologie</span>
+                            <span class="tag">Programmation</span>
+                        </div>
+                        <div class="club-stats">
+                            <span>👥 45 membres</span>
+                            <span>📅 Réunions hebdomadaires</span>
+                        </div>
+                        <a href="#" class="view-club-btn">Rejoindre le club</a>
+                    </div>
+                </div>
+
+                <div class="club-card">
+                    <div class="club-image">
+                        <img src="/api/placeholder/300/200" alt="Club Robotique">
+                    </div>
+                    <div class="club-info">
+                        <h3>Club Robotique</h3>
+                        <p>Concevez, construisez et programmez des robots pour participer à des compétitions nationales.</p>
+                        <div class="club-tags">
+                            <span class="tag">Technologie</span>
+                            <span class="tag">Ingénierie</span>
+                        </div>
+                        <div class="club-stats">
+                            <span>👥 30 membres</span>
+                            <span>📅 Réunions bi-hebdomadaires</span>
+                        </div>
+                        <a href="#" class="view-club-btn">Rejoindre le club</a>
+                    </div>
+                </div>
+
+                <div class="club-card">
+                    <div class="club-image">
+                        <img src="/api/placeholder/300/200" alt="Club Football">
+                    </div>
+                    <div class="club-info">
+                        <h3>Club Football</h3>
+                        <p>Participez à des matchs amicaux, des tournois et développez vos compétences footballistiques dans une ambiance conviviale.</p>
+                        <div class="club-tags">
+                            <span class="tag">Sport</span>
+                            <span class="tag">Compétition</span>
+                        </div>
+                        <div class="club-stats">
+                            <span>👥 40 membres</span>
+                            <span>📅 Entraînements bi-hebdomadaires</span>
+                        </div>
+                        <a href="#" class="view-club-btn">Rejoindre le club</a>
+                    </div>
+                </div>
+
+                <div class="club-card">
+                    <div class="club-image">
+                        <img src="/api/placeholder/300/200" alt="Club Échecs">
+                    </div>
+                    <div class="club-info">
+                        <h3>Club Échecs</h3>
+                        <p>Améliorez votre stratégie et votre concentration en participant à des parties d'échecs et des tournois internes.</p>
+                        <div class="club-tags">
+                            <span class="tag">Jeu</span>
+                            <span class="tag">Stratégie</span>
+                        </div>
+                        <div class="club-stats">
+                            <span>👥 28 membres</span>
+                            <span>📅 Réunions hebdomadaires</span>
+                        </div>
+                        <a href="#" class="view-club-btn">Rejoindre le club</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 ClubConnect - Institut. Tous droits réservés.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html> 

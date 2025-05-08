@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Événements - ClubConnect</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <img src="images/supnum.png" alt="Logo Institut">
+                <span>SupClubs</span>
+            </div>
+            
+            <ul class="nav-links">
+                <li><a href="index.html">Accueil</a></li>
+                <li><a href="clubs.html">Clubs</a></li>
+                <li><a href="evenements.html" class="active">Événements</a></li>
+                <li><a href="about.html">À propos</a></li>
+            </ul>
+            
+            <div class="auth-buttons">
+                <button class="login-btn">Connexion</button>
+                <button class="signup-btn">Inscription</button>
+            </div>
+            
+            <button class="hamburger">☰</button>
+        </nav>
+    </header>
+    
+    <main>
+        <section class="hero">
+            <h1>Événements à venir</h1>
+            <p>Découvrez et participez aux événements organisés par nos clubs.</p>
+        </section>
+        
+        <section class="clubs-section">
+            <div class="section-title">
+                <h2>Prochains événements</h2>
+            </div>
+            
+            <div class="events-filter">
+                <div class="search-bar">
+                    <input type="text" placeholder="Rechercher un événement...">
+                    <button class="search-btn">Rechercher</button>
+                </div>
+                <div class="filter-tags">
+                    <button class="filter-btn active">Tous</button>
+                    <button class="filter-btn">Technologie</button>
+                    <button class="filter-btn">Art</button>
+                    <button class="filter-btn">Sport</button>
+                    <button class="filter-btn">Culture</button>
+                </div>
+            </div>
+
+            <div class="clubs-grid">
+                <div class="club-card">
+                    <div class="club-image">
+                        <img src="/api/placeholder/300/200" alt="Hackathon annuel">
+                    </div>
+                    <div class="club-info">
+                        <div class="event-date">📅 15-16 Mars 2025</div>
+                        <h3>Hackathon annuel</h3>
+                        <p>48 heures de coding, d'innovation et de collaboration pour résoudre des problèmes réels.</p>
+                        <div class="club-tags">
+                            <span class="tag">Technologie</span>
+                            <span class="tag">Compétition</span>
+                        </div>
+                        <div class="event-details">
+                            <span>📍 Amphithéâtre principal</span>
+                            <span>⏰ 9h00 - 18h00</span>
+                        </div>
+                        <a href="#" class="view-club-btn">S'inscrire</a>
+                    </div>
+                </div>
+
+                <div class="club-card">
+                    <div class="club-image">
+                        <img src="/api/placeholder/300/200" alt="Exposition artistique">
+                    </div>
+                    <div class="club-info">
+                        <div class="event-date">📅 20 Mars 2025</div>
+                        <h3>Exposition artistique</h3>
+                        <p>Découvrez les œuvres créées par les étudiants de notre institut lors de cette exposition annuelle.</p>
+                        <div class="club-tags">
+                            <span class="tag">Art</span>
+                            <span class="tag">Événement</span>
+                        </div>
+                        <div class="event-details">
+                            <span>📍 Galerie d'art</span>
+                            <span>⏰ 14h00 - 20h00</span>
+                        </div>
+                        <a href="#" class="view-club-btn">Plus d'infos</a>
+                    </div>
+                </div>
+
+                <div class="club-card">
+                    <div class="club-image">
+                        <img src="/api/placeholder/300/200" alt="Tournoi de robotique">
+                    </div>
+                    <div class="club-info">
+                        <div class="event-date">📅 25 Mars 2025</div>
+                        <h3>Tournoi de robotique</h3>
+                        <p>Compétition de robots autonomes organisée par le club de robotique.</p>
+                        <div class="club-tags">
+                            <span class="tag">Technologie</span>
+                            <span class="tag">Compétition</span>
+                        </div>
+                        <div class="event-details">
+                            <span>📍 Salle polyvalente</span>
+                            <span>⏰ 10h00 - 17h00</span>
+                        </div>
+                        <a href="#" class="view-club-btn">S'inscrire</a>
+                    </div>
+                </div>
+
+                <div class="club-card">
+                    <div class="club-image">
+                        <img src="/api/placeholder/300/200" alt="Conférence IA">
+                    </div>
+                    <div class="club-info">
+                        <div class="event-date">📅 30 Mars 2025</div>
+                        <h3>Conférence sur l'IA</h3>
+                        <p>Une journée dédiée à l'intelligence artificielle avec des experts du domaine.</p>
+                        <div class="club-tags">
+                            <span class="tag">Technologie</span>
+                            <span class="tag">Conférence</span>
+                        </div>
+                        <div class="event-details">
+                            <span>📍 Grand amphithéâtre</span>
+                            <span>⏰ 9h00 - 16h00</span>
+                        </div>
+                        <a href="#" class="view-club-btn">Réserver</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <p>&copy; 2025 ClubConnect - Institut. Tous droits réservés.</p>
+    </footer>
+    
+    <script src="script.js"></script>
+</body>
+</html> 
