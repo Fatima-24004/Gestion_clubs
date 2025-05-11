@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Page d'Inscription | Développeur Enfermé</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .error-message {
+      color: #d93025;
+      font-size: 12px;
+      margin-top: 4px;
+      text-align: left;
+      width: 100%;
+      font-weight: 600;
+      user-select: text;
+    }
+  </style>
+</head>
+<body>
+  <div class="main-container">
+    <div class="form-section register-section">
+      <form id="registerForm" novalidate>
+        <h1>Créer un Compte</h1>
+        <span>ou utilisez votre email pour vous inscrire</span>
+
+        <input type="text" id="name" placeholder="Nom" required />
+        <div id="nameError" class="error-message" aria-live="polite"></div>
+
+        <input type="email" id="email" placeholder="Email" required />
+        <div id="emailError" class="error-message" aria-live="polite"></div>
+
+        <input
+          type="password"
+          id="password"
+          placeholder="Mot de passe"
+          required
+        />
+        <div id="passwordError" class="error-message" aria-live="polite"></div>
+
+        <input
+          type="password"
+          id="confirmPassword"
+          placeholder="Confirmer le mot de passe"
+          required
+        />
+        <div id="confirmPasswordError" class="error-message" aria-live="polite"></div>
+
+        <button type="submit">Inscription</button>
+      </form>
+    </div>
+
+    <div class="switch-container">
+      <div class="switch-panel left-panel">
+        <h1>Bonjour, Ami !</h1>
+        <p>Inscrivez-vous avec vos informations personnelles pour utiliser toutes les fonctionnalités du site</p>
+        <a href="index.html"><button>Connexion</button></a>
+      </div>
+    </div>
+  </div>
+
+<script>
+  const registerForm = document.getElementById("registerForm");
+
+  const nameInput = document.getElementById("name");
+  const emailInput = document.getElementById("email");
+  const passwordInput = document.getElementById("password");
+  const confirmPasswordInput = document.getElementById("confirmPassword");
+
+  const nameError = document.getElementById("nameError");
+  const emailError = document.getElementById("emailError");
+  const passwordError = document.getElementById("passwordError");
+  const confirmPasswordError = document.getElementById("confirmPasswordError");
+
+  registerForm.addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    // Reset errors
+    nameError.textContent = "";
+    emailError.textContent = "";
+    passwordError.textContent = "";
+    confirmPasswordError.textContent = "";
+
+    let valid = true;
+
+    // Validate name
+    if (!nameInput.value.trim()) {
+      nameError.textContent = "Le nom est obligatoire.";
+      valid = false;
+    }
+
+    // Validate email
+    const email = emailInput.value.trim();
+    if (!email) {
+      emailError.textContent = "L'email est obligatoire.";
+      valid = false;
+    } else if (!email.includes("@supnum.mr")) {
+      emailError.textContent = "L'email doit contenir @supnum.mr.";
+      valid = false;
+    }
+
+    // Validate password length = 8 exactly
+    const pwd = passwordInput.value;
+    if (!pwd) {
+      passwordError.textContent = "Le mot de passe est obligatoire.";
+      valid = false;
+    } else if (pwd.length !== 8) {
+      passwordError.textContent = "Le mot de passe doit contenir exactement 8 caractères.";
+      valid = false;
+    }
+
+    // Confirm password matches
+    const confirmPwd = confirmPasswordInput.value;
+    if (!confirmPwd) {
+      confirmPasswordError.textContent = "Veuillez confirmer votre mot de passe.";
+      valid = false;
+    } else if (confirmPwd !== pwd) {
+      confirmPasswordError.textContent = "Les mots de passe ne correspondent pas.";
+      valid = false;
+    }
+
+    if (valid) {
+      alert("Inscription réussie !");
+      registerForm.reset();
+    }
+  });
+</script>
+</body>
+</html>
+

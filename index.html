@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Page de Connexion | Développeur Enfermé</title>
+    <style>
+        .error-message {
+            color: #d93025;
+            font-size: 12px;
+            margin-top: 4px;
+            user-select: text;
+        }
+    </style>
+</head>
+<body>
+    <div class="main-container">
+        <!-- Formulaire Connexion -->
+        <div class="form-section login-section" id="loginSection">
+            <form id="loginForm">
+                <h1>Connexion</h1>
+                <span>ou utilisez votre email et mot de passe</span>
+                <input type="email" id="loginEmail" placeholder="Email" required />
+                <input type="password" id="loginPassword" placeholder="Mot de passe" required />
+                <a href="#" id="forgotPasswordLink">Mot de passe oublié ?</a>
+                <button type="submit">Connexion</button>
+            </form>
+        </div>
+
+        <!-- Formulaire Réinitialisation mot de passe (caché par défaut) -->
+        <div class="form-section login-section" id="resetPasswordSection" style="display:none;">
+            <form id="resetPasswordForm">
+                <h1>Réinitialiser le mot de passe</h1>
+                <span>Entrez votre email pour recevoir un lien de réinitialisation</span>
+                <input type="email" id="resetEmail" placeholder="Email" required />
+                <div id="resetEmailError" class="error-message" aria-live="polite"></div>
+                <button type="submit">Envoyer</button>
+                <button type="button" id="backToLoginBtn" style="margin-top:10px; background:#555;">Retour à la connexion</button>
+            </form>
+        </div>
+
+        <!-- Panneau d'inscription -->
+        <div class="switch-container">
+            <div class="switch-panel right-panel">
+                <h1>Bienvenue de Nouveau !</h1>
+                <p>Entrez vos informations personnelles pour utiliser toutes les fonctionnalités du site</p>
+                <a href="register.html"><button>Inscription</button></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        const forgotPasswordLink = document.getElementById('forgotPasswordLink');
+        const loginSection = document.getElementById('loginSection');
+        const resetPasswordSection = document.getElementById('resetPasswordSection');
+        const backToLoginBtn = document.getElementById('backToLoginBtn');
+        const resetEmailError = document.getElementById('resetEmailError');
+
+        forgotPasswordLink.addEventListener('click', e => {
+            e.preventDefault();
+            loginSection.style.display = 'none';
+            resetPasswordSection.style.display = 'block';
+            resetEmailError.textContent = '';
+            document.getElementById('resetEmail').value = '';
+        });
+
+        backToLoginBtn.addEventListener('click', () => {
+            resetPasswordSection.style.display = 'none';
+            loginSection.style.display = 'block';
+            resetEmailError.textContent = '';
+        });
+
+        document.getElementById('resetPasswordForm').addEventListener('submit', e => {
+            e.preventDefault();
+            const email = document.getElementById('resetEmail').value.trim();
+            resetEmailError.textContent = '';
+
+            if (!email.includes('@supnum.mr')) {
+                resetEmailError.textContent = "L'email doit contenir @supnum.mr.";
+                return;
+            }
+
+            alert(`Un lien de réinitialisation a été envoyé à ${email}.`);
+            e.target.reset();
+            backToLoginBtn.click();
+        });
+
+        document.getElementById('loginForm').addEventListener('submit', e => {
+            e.preventDefault();
+            alert('Connexion non implémentée pour l’instant.');
+        });
+    </script>
+</body>
+</html>
